@@ -1,6 +1,6 @@
 # MyBooks
 
-Alunas: Nivea Stelmam e Priscilla Melo
+Dupla: Nivea Stelmam e Priscilla Melo
 
 Objetivo do trabalho:
 
