@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivityListar">
+
+        <TextView
+            android:id="@+id/textViewTitList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="67dp"
+            android:text="Título:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewAutList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:text="Autor:"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitList"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitList" />
+
+        <TextView
+            android:id="@+id/textViewAnoList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="17dp"
+            android:text="Ano:"
+            app:layout_constraintStart_toStartOf="@+id/textViewNotaList"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAutList" />
+
+        <TextView
+            android:id="@+id/textViewNotaList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="17dp"
+            android:text="Nota:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAnoList" />
+
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="98dp"
+            android:text="ANTERIOR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="37dp"
+            android:text="PRÓXIMO"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAnterior"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnAnterior" />
+
+        <TextView
+            android:id="@+id/textViewRespTit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="284dp"
+            android:layout_marginBottom="645dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTitList"
+            app:layout_constraintTop_toTopOf="@+id/textViewTitList" />
+
+        <TextView
+            android:id="@+id/textViewRespAut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="282dp"
+            android:layout_marginBottom="613dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewRespTit"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRespTit" />
+
+        <TextView
+            android:id="@+id/textViewRespAno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="574dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewRespAut"
+            app:layout_constraintStart_toEndOf="@+id/textViewAnoList"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRespAut" />
+
+        <TextView
+            android:id="@+id/textViewRespNota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="282dp"
+            android:layout_marginBottom="538dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewRespAno"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRespAno" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
