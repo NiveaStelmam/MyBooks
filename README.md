@@ -1,4 +1,7 @@
 # MyBooks
+
+Alunas: Nivea Stelmam e Priscilla Melo
+
 Objetivo do trabalho:
 
 • Desenvolver um aplicativo que salva dados sobre livros lidos pelo 
