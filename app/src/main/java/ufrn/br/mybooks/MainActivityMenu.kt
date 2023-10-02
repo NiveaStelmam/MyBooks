@@ -1,5 +1,6 @@
 package ufrn.br.mybooks
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -24,5 +25,15 @@ class MainActivityMenu : AppCompatActivity() {
             "banco_aula.sqlite"
         ).fallbackToDestructiveMigration()
             .allowMainThreadQueries().build()
+
+        binding.btnCadastrar.setOnClickListener(){
+            val intent = Intent(this,MainActivityCadastro::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnList.setOnClickListener(){
+            val intent = Intent(this, MainActivityListar::class.java)
+            startActivity(intent)
+        }
     }
 }

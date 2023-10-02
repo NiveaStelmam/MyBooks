@@ -4,11 +4,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
- data class Livros (
-  var nome:String,
+ data class Livro (
+  var titulo:String,
   var autor:String,
   var ano:Int,
-  var nota:Int,
+  var nota:Float,
  ){
   @PrimaryKey(autoGenerate = true)
 
