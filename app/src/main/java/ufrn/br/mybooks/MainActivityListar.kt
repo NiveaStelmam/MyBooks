@@ -2,6 +2,7 @@ package ufrn.br.mybooks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.room.Room
 import ufrn.br.mybooks.database.AppDatabase
@@ -36,6 +37,10 @@ class MainActivityListar : AppCompatActivity() {
 
         // Carregar os registros do bd
         registros = livrosDao.obterTodosOsLivros()
+
+//        for (livro in registros) {
+//            Log.d("teste", "Título: ${livro.titulo}, Autor: ${livro.autor}")
+//        }
 
         // Exibe o primeiro registro na tela (se existir)
         exibirRegistroAtual()
