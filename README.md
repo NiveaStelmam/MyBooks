@@ -8,6 +8,6 @@ Objetivo do trabalho:
     usuário.
 
 * Oferecer 3 telas:
-    - Menu
-    - Cadastro de livros (nome, autor, ano, nota)
+    - Menu (cadastrar, listar)
+    - Cadastro de livros (título, autor, ano, nota)
     - Exibir livros cadastrados
