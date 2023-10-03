@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import ufrn.br.mybooks.database.AppDatabase
@@ -15,10 +16,10 @@ import ufrn.br.mybooks.repository.LivrosDao
 class MainActivityListar : AppCompatActivity() {
 
     lateinit var binding : ActivityListarBinding
-   // lateinit var viewModel: ListarViewModel
-
+    lateinit var viewModel: ListarViewModel
     lateinit var db: AppDatabase
     lateinit var livrosDao: LivrosDao
+
     var registros: List<Livro> = listOf()
     var posicaoAtual = 0
 
@@ -27,7 +28,9 @@ class MainActivityListar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar)
         binding =  DataBindingUtil.setContentView(this, R.layout.activity_listar)
-        //viewModel = ViewModelProvider(this).get(ListarViewModel::class.java)
+
+        viewModel = ViewModelProvider(this).get(ListarViewModel::class.java)
+        binding.lifecycleOwner = this
 
 
         val db = Room.databaseBuilder(
@@ -41,13 +44,19 @@ class MainActivityListar : AppCompatActivity() {
 
         // Carregar os registros do bd
         registros = livrosDao.obterTodosOsLivros()
+        viewModel.setLivros(registros)
 
 //        for (livro in registros) {
 //            Log.d("teste", "Título: ${livro.titulo}, Autor: ${livro.autor}")
 //        }
 
-        // Exibe o primeiro registro na tela (se existir)
-        exibirRegistroAtual()
+      // Observa as mudanças na propriedade LiveData "livros" do ViewModel
+        viewModel.livros.observe(this, Observer { listaDeLivros ->
+            registros = listaDeLivros
+            exibirRegistroAtual() // atualiza a interface
+        })
+
+
 
         binding.btnAnterior.setOnClickListener {
             if (posicaoAtual > 0) {
