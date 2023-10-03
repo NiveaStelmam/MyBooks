@@ -19,12 +19,12 @@ class MainActivityMenu : AppCompatActivity() {
 
 
 
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java,
-            "banco_aula.sqlite"
-        ).fallbackToDestructiveMigration()
-            .allowMainThreadQueries().build()
+//        val db = Room.databaseBuilder(
+//            applicationContext,
+//            AppDatabase::class.java,
+//            "banco_aula.sqlite"
+//        ).fallbackToDestructiveMigration()
+//            .allowMainThreadQueries().build()
 
         binding.btnCadastrar.setOnClickListener(){
             val intent = Intent(this,MainActivityCadastro::class.java)
