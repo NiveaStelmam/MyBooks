@@ -26,7 +26,6 @@ class MainActivityListar : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listar)
         binding =  DataBindingUtil.setContentView(this, R.layout.activity_listar)
 
         viewModel = ViewModelProvider(this).get(ListarViewModel::class.java)
@@ -51,6 +50,7 @@ class MainActivityListar : AppCompatActivity() {
 //        }
 
       // Observa as mudanças na propriedade LiveData "livros" do ViewModel
+
         viewModel.livros.observe(this, Observer { listaDeLivros ->
             registros = listaDeLivros
             exibirRegistroAtual() // atualiza a interface
