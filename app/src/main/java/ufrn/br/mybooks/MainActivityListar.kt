@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import ufrn.br.mybooks.database.AppDatabase
 import ufrn.br.mybooks.databinding.ActivityListarBinding
@@ -14,6 +15,8 @@ import ufrn.br.mybooks.repository.LivrosDao
 class MainActivityListar : AppCompatActivity() {
 
     lateinit var binding : ActivityListarBinding
+   // lateinit var viewModel: ListarViewModel
+
     lateinit var db: AppDatabase
     lateinit var livrosDao: LivrosDao
     var registros: List<Livro> = listOf()
@@ -24,6 +27,7 @@ class MainActivityListar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar)
         binding =  DataBindingUtil.setContentView(this, R.layout.activity_listar)
+        //viewModel = ViewModelProvider(this).get(ListarViewModel::class.java)
 
 
         val db = Room.databaseBuilder(
