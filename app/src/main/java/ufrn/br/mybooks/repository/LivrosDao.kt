@@ -13,6 +13,4 @@ interface LivrosDao {
     @Query("SELECT * FROM livro")
     fun obterTodosOsLivros(): List<Livro>
 
-
-
 }
