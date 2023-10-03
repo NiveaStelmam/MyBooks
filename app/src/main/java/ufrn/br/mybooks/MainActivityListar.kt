@@ -50,7 +50,6 @@ class MainActivityListar : AppCompatActivity() {
 //        }
 
       // Observa as mudanças na propriedade LiveData "livros" do ViewModel
-
         viewModel.livros.observe(this, Observer { listaDeLivros ->
             registros = listaDeLivros
             exibirRegistroAtual() // atualiza a interface
