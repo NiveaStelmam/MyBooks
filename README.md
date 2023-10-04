@@ -1,6 +1,8 @@
 # MyBooks
 
-Dupla: Nivea Stelmam e Priscilla Melo.
+Trabalho da unidade I de PDM
+  
+Dupla: Nivea Stelmam e Priscilla Melo
 
 Objetivo do trabalho:
 
